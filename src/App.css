@@ -1,38 +1,80 @@
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input-container {
+  /* text-align: center; */
+  /* border: 2px solid yellow; */
+  margin: 10% auto; /* Adjust the margin as per your requirement */
+  padding: 20px; /* Add padding to create space within the container */
+  max-width: 400px; /* Limit the maximum width of the container */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 2%; /* Adjust the margin as per your requirement */
 }
 
-.App-link {
-  color: #61dafb;
+.input-task {
+  flex: 1; /* Allow the input to take up remaining space */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  margin-left: 10px; /* Add some spacing between the input and the button */
+}
+
+
+
+.task{
+  display: flex;
+  align-items: center;
+  border: 2px solid grey;
+  background-color: lightgrey;
+  padding: 1%;
+  margin: 1%;
+}
+.delete{
+  margin-left: auto;
+}
+
+.edit-btn{
+  padding-right: 5px;
+}
+
+
+
+.item{
+  /* text-decoration: solid; */
+  font-weight: bold;
+  font-size: larger;
+  color: black;
+}
+.active {
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust the value as needed */
+  width: 100%;
+  height: 2px; /* Adjust the value as needed */
+  background-color: currentColor; /* Use the text color */
+}
+
+.item:hover{
+  background-color: #F0F0F0;
+  transition: #F0F0F0 0.3s ease;
+}
+
+
+.no-tasks{
+  font-size: medium;
+  font-weight: 500;
+  margin-top: 2%;
+  text-align: center;
 }
